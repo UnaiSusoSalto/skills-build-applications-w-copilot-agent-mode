@@ -7,7 +7,7 @@ die() {
   echo "ERROR: $@" >&2
   exit 1
 }
-
+ 
 : "${CODESPACE_NAME:?CODESPACE_NAME environment variable not set. This script should be run in a GitHub Codespace environment.}"
 
 echo "Setting multi-tier application port visibility..."
