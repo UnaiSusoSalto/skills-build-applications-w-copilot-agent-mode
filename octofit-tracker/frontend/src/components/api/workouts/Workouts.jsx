@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchApi } from '../api';
+import { fetchApi } from '../../../api';
 
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);

@@ -1,10 +1,10 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
 import logo from './assets/hero.png'
-import Users from './components/Users'
-import Teams from './components/Teams'
-import Activities from './components/Activities'
-import Workouts from './components/Workouts'
-import Leaderboard from './components/Leaderboard'
+import Users from './components/api/users/Users'
+import Teams from './components/api/teams/Teams'
+import Activities from './components/api/activities/Activities'
+import Workouts from './components/api/workouts/Workouts'
+import Leaderboard from './components/api/leaderboard/Leaderboard'
 import './App.css'
 
 function Home() {
