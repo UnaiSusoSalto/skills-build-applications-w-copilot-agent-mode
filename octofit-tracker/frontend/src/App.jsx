@@ -25,11 +25,11 @@ function App() {
           OctoFit Tracker
         </NavLink>
         <div className="navbar-nav">
-          <NavLink className="nav-link" to="/users">Users</NavLink>
-          <NavLink className="nav-link" to="/teams">Teams</NavLink>
-          <NavLink className="nav-link" to="/activities">Activities</NavLink>
-          <NavLink className="nav-link" to="/workouts">Workouts</NavLink>
-          <NavLink className="nav-link" to="/leaderboard">Leaderboard</NavLink>
+          <NavLink className="nav-link" to="/api/users">Users</NavLink>
+          <NavLink className="nav-link" to="/api/teams">Teams</NavLink>
+          <NavLink className="nav-link" to="/api/activities">Activities</NavLink>
+          <NavLink className="nav-link" to="/api/workouts">Workouts</NavLink>
+          <NavLink className="nav-link" to="/api/leaderboard">Leaderboard</NavLink>
         </div>
       </nav>
 
@@ -37,10 +37,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/api/users" element={<Users />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/api/teams" element={<Teams />} />
           <Route path="/activities" element={<Activities />} />
+          <Route path="/api/activities" element={<Activities />} />
           <Route path="/workouts" element={<Workouts />} />
+          <Route path="/api/workouts" element={<Workouts />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/api/leaderboard" element={<Leaderboard />} />
         </Routes>
       </main>
     </div>
