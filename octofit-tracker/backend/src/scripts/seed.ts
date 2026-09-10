@@ -7,7 +7,7 @@ import Workout from '../models/Workout';
 import Leaderboard from '../models/Leaderboard';
 
 const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/octofit_db';
-
+ 
 async function seedDatabase() {
   try {
     console.log('Seed the octofit_db database with test data');
