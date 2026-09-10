@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 require("./config/database");
 const User_1 = __importDefault(require("./models/User"));
@@ -16,6 +17,7 @@ const codespaceName = process.env.CODESPACE_NAME;
 const baseUrl = codespaceName
     ? `https://${codespaceName}-8000.app.github.dev`
     : `http://localhost:${port}`;
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.get('/api/health', (_request, response) => {
     response.json({

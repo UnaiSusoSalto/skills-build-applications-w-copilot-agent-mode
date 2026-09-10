@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// Seed the octofit_db database with test data
 const mongoose_1 = __importDefault(require("mongoose"));
 const User_1 = __importDefault(require("../models/User"));
 const Team_1 = __importDefault(require("../models/Team"));
@@ -12,6 +13,7 @@ const Leaderboard_1 = __importDefault(require("../models/Leaderboard"));
 const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/octofit_db';
 async function seedDatabase() {
     try {
+        console.log('Seed the octofit_db database with test data');
         await mongoose_1.default.connect(connectionString);
         console.log('Connected to octofit_db');
         await User_1.default.deleteMany({});

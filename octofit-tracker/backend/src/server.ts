@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import './config/database';
 import User from './models/User';
@@ -13,6 +14,7 @@ const baseUrl = codespaceName
   ? `https://${codespaceName}-8000.app.github.dev`
   : `http://localhost:${port}`;
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/api/health', (_request, response) => {
