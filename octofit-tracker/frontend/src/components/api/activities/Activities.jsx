@@ -14,7 +14,7 @@ function Activities() {
   if (error) {
     return <div className="alert alert-danger">Error loading activities: {error}</div>;
   }
-
+ 
   return (
     <div>
       <h2>Activities</h2>
