@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchApi } from '../../../api';
+import { fetchApi } from '../api';
 
 function Activities() {
   const [activities, setActivities] = useState([]);
@@ -14,7 +14,7 @@ function Activities() {
   if (error) {
     return <div className="alert alert-danger">Error loading activities: {error}</div>;
   }
- 
+
   return (
     <div>
       <h2>Activities</h2>
